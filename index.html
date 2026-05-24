@@ -154,10 +154,24 @@
       margin-bottom: 6px;
     }
 
-    .projet-card p {
-      color: #64748b;
-      font-size: 0.8rem;
-    }
+   .projet-card p {
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.projet-card {
+  text-decoration: none;
+  display: block;
+}
+
+.lien {
+  display: inline-block;
+  margin-top: 8px;
+  color: #2563eb;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+    
 
     /* Contact */
     .contact-links {
@@ -252,22 +266,36 @@
     <section class="section">
       <h2>🚀 Projets</h2>
       <div class="projets">
-        <div class="projet-card">
+        <a href="https://nlemvojopie-star.github.io/mon-app-react" target="_blank" class="projet-card">
           <h3>Portfolio React</h3>
           <p>React + Tailwind</p>
-        </div>
-        <div class="projet-card">
+          <span class="lien">Voir le projet →</span>
+        </a>
+        <a href="https://nlemvojopie-star.github.io/calculatrice" target="_blank" class="projet-card">
+          <h3>Calculatrice</h3>
+          <p>HTML + CSS + JavaScript</p>
+          <span class="lien">Voir le projet →</span>
+        </a>
+        <a href="https://nlemvojopie-star.github.io/todo-list" target="_blank" class="projet-card">
+          <h3>To-Do List</h3>
+          <p>React + useState</p>
+          <span class="lien">Voir le projet →</span>
+        </a>
+        <a href="https://nlemvojopie-star.github.io/mini-blog" target="_blank" class="projet-card">
+          <h3>Mini Blog</h3>
+          <p>React + GitHub Pages</p>
+          <span class="lien">Voir le projet →</span>
+        </a>
+        <a href="https://nlemvojopie-star.github.io/login-app" target="_blank" class="projet-card">
+          <h3>Login JWT</h3>
+          <p>Authentification sécurisée</p>
+          <span class="lien">Voir le projet →</span>
+        </a>
+        <a href="https://github.com/nlemvojopie-star/mon-backend" target="_blank" class="projet-card">
           <h3>Backend API</h3>
           <p>Node.js + Express + MongoDB</p>
-        </div>
-        <div class="projet-card">
-          <h3>Auth JWT</h3>
-          <p>Authentification sécurisée</p>
-        </div>
-        <div class="projet-card">
-          <h3>Carte de Visite</h3>
-          <p>HTML + CSS</p>
-        </div>
+          <span class="lien">Voir le projet →</span>
+        </a>
       </div>
     </section>
 
