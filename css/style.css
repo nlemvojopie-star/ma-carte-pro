@@ -1,0 +1,264 @@
+:root {
+  --fond-page: #f4f7fb;
+  --fond-blanc: #ffffff;
+  --fond-doux: #eaf1f8;
+  --texte: #172033;
+  --texte-secondaire: #5d6b82;
+  --bleu: #1d4ed8;
+  --bleu-fonce: #163ba1;
+  --vert: #0f9d74;
+  --bordure: #d9e2ef;
+  --ombre: 0 12px 30px rgba(31, 49, 77, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--fond-page);
+  color: var(--texte);
+  font-family: "DM Sans", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.conteneur {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #e8f0ff, #f7fbff);
+  border-bottom: 1px solid var(--bordure);
+}
+
+.hero-contenu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.photo-profil {
+  width: 150px;
+  height: 150px;
+  border: 5px solid var(--fond-blanc);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  box-shadow: var(--ombre);
+  flex-shrink: 0;
+}
+
+.hero-texte {
+  max-width: 700px;
+}
+
+.disponibilite {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background-color: #e1f7ee;
+  color: #087053;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Syne", Arial, sans-serif;
+}
+
+h1 {
+  margin: 0;
+  color: var(--texte);
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1.1;
+}
+
+h1 span {
+  color: var(--bleu);
+}
+
+.sous-titre {
+  max-width: 650px;
+  margin: 16px 0 0;
+  color: var(--texte-secondaire);
+  font-size: 1.05rem;
+}
+
+.liens-principaux {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.bouton {
+  display: inline-block;
+  padding: 12px 18px;
+  border: 2px solid transparent;
+  border-radius: 9px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.bouton:hover {
+  transform: translateY(-2px);
+}
+
+.bouton-primaire {
+  background-color: var(--bleu);
+  color: white;
+}
+
+.bouton-primaire:hover {
+  background-color: var(--bleu-fonce);
+}
+
+.bouton-secondaire {
+  border-color: var(--bleu);
+  color: var(--bleu);
+}
+
+.bouton-secondaire:hover {
+  background-color: #e6eeff;
+}
+
+.section {
+  padding: 56px 0 0;
+}
+
+.section h2 {
+  margin: 0 0 24px;
+  color: var(--texte);
+  font-size: 1.65rem;
+}
+
+.grille-cartes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+.carte {
+  display: block;
+  min-height: 185px;
+  padding: 24px;
+  border: 1px solid var(--bordure);
+  border-radius: 16px;
+  background-color: var(--fond-blanc);
+  box-shadow: 0 4px 12px rgba(31, 49, 77, 0.05);
+}
+
+.carte-lien {
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carte-lien:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ombre);
+}
+
+.icone {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 2rem;
+}
+
+.carte h3 {
+  margin: 0 0 10px;
+  color: var(--bleu-fonce);
+  font-size: 1.1rem;
+}
+
+.carte p {
+  margin: 0;
+  color: var(--texte-secondaire);
+}
+
+.lien-carte {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--bleu);
+  font-weight: 700;
+}
+
+.parcours {
+  padding: 24px;
+  border-left: 5px solid var(--vert);
+  border-radius: 10px;
+  background-color: var(--fond-doux);
+}
+
+.parcours p {
+  margin: 0;
+  color: var(--texte);
+}
+
+.parcours p + p {
+  margin-top: 14px;
+}
+
+footer {
+  margin-top: 64px;
+  padding: 28px 0;
+  background-color: #172033;
+  color: #dce7f6;
+}
+
+.pied-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.pied-page p {
+  margin: 0;
+}
+
+.pied-page a {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.pied-page a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 42px 0;
+  }
+
+  .hero-contenu {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .photo-profil {
+    width: 120px;
+    height: 120px;
+  }
+
+  .section {
+    padding-top: 42px;
+  }
+
+  .pied-page {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
